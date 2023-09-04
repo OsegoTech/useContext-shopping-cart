@@ -9,8 +9,8 @@ import { ProductsProvider } from "./context/ProductsContext";
 import { useLocalStorage } from "./util";
 
 function App() {
-  const [cart, setCart] = useLocalStorage([]);
-  const [products, setProducts] = useLocalStorage([]);
+  const [cart, setCart] = useLocalStorage("cart",[]);
+  const [products, setProducts] = useLocalStorage("products",[]);
 
   const addProduct = (product) => {
     product.id = products.length + 1;
